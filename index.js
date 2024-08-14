@@ -4,8 +4,9 @@ const productsRoutes = require("./Routes/ProductRouter");
 const UserRoutes = require("./Routes/UserRouter");
 const cartRoute = require("./Routes/CartRouter");
 const orderRoute=require("./Routes/OrderRouter");
+const cors=require("cors");
 const mongoose = require('mongoose');
-
+app.use(cors())
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://myAtlasDBUser:Sugandhi20@myatlasclusteredu.fbhzyk3.mongodb.net/productDB").then(() => {

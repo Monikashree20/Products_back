@@ -7,8 +7,10 @@ const orderRoute=require("./Routes/OrderRouter");
 const cors=require("cors");
 const mongoose = require('mongoose');
 app.use(cors())
-app.use(express.json());
-
+// app.use(express.json());
+app.use(cors({
+    origin: 'http://localhost:5173',
+  }));
 mongoose.connect("mongodb+srv://myAtlasDBUser:Sugandhi20@myatlasclusteredu.fbhzyk3.mongodb.net/productDB").then(() => {
     console.log("Connected to DataBase");
 });
